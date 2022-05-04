@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap');
+
+:root {
+  --text-blue: hsl(238, 29%, 16%);
+  --text-dkblue: hsl(240, 6%, 50%);
+  --text-xdkblue: hsl(237, 12%, 33%);
+  --text-redblue: hsl(14, 88%, 65%);
+  --gradient-violet: hsl(273, 75%, 66%);
+  --gradient-blue: hsl(240, 73%, 65%);
+  --divider-blue: hsl(240, 5%, 91%);
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+}
+html {
+  padding: 0%;
+  margin: 0%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    180deg,
+    var(--gradient-violet),
+    var(--gradient-blue)
+  );
+  padding: 5rem 1rem;
+  color: var(--text-blue);
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  width: 100%;
+  font-family: 'Fredoka', sans-serif;
+  background-size: 100% 100%;
+}
+.card {
+  background-color: white;
+  border-radius: 2rem;
+  position: relative;
+  background-image: url(images/bg-pattern-desktop.svg);
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center -9rem;
+  /* width: 20rem; */
+  left: 50%;
+  transform: translate(-50%, 0%);
+  margin-top: 50px;
+  /* border: 1px solid saddlebrown; */
+  padding: 0px 6.5rem 70px 0;
+  box-sizing: content-box;
+}
+
+.card_image img {
+  position: relative;
+  height: auto;
+  /* max-width: 15rem; */
+  height: auto;
+  margin: auto;
+  display: block;
+  top: -7rem;
+  /* border: 1px solid saddlebrown; */
+}
+
+.card_text {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 295px;
+  top: -80px;
+  /* border: 1px solid saddlebrown; */
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  top: 0px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+.accordion_item {
+  padding-top: 1rem;
+  border-bottom: 1px solid var(--divider-blue);
+}
+.accordion_question {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 0.875rem;
+  font-family: 'Fredoka', sans-serif;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding: 4px 0;
+}
+.accordion_question::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 8px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-image: url(images/icon-arrow-down.svg);
+  transition: transform 300ms ease-in-out;
+}
+.accordion_question.open::after {
+  transform: rotate(180deg);
+}
+.accordion_content.open1 {
+  height: 46.8px;
+  margin-bottom: 1rem;
+  animation-name: mymy;
+  animation-duration: 100ms;
+}
+
+.accordion_content {
+  transition: 300ms linear;
+  transition-property: height, margin-bottom;
+  position: relative;
+  top: 0px;
+  font-size: 0.75rem;
+  line-height: 1.4rem;
+  margin-bottom: 0rem;
+  /* display: none; */
+  height: 0px;
+  overflow: hidden;
+}
+.card_box {
+  display: none;
+}
+.accordion_question:focus {
+  z-index: 3;
+  border-color: #86b7fe;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    height: 100;
+    /* background-size: 100% 100%; */
+    margin: 0%;
+  }
+  .card {
+    width: 896px;
+    background-size: 45%;
+    background-position: -10.2% center;
+    /* padding: 0px 6.5rem 70px 0; */
+    /* background-size: 100%; */
+    padding: 500px;
+    background-position: -488px -250px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    padding: 0%;
+    padding-bottom: 60px;
+    /* border: 1px solid red; */
+    display: flex;
+    background-size: 45%;
+    background-position: -12.2% center;
+  }
+  .card_text {
+    position: relative;
+    width: 100%;
+    /* width: 396px; */
+    flex: 1 1 0%;
+    left: 20%;
+    top: 50%;
+    display: inline-block;
+    height: 100%;
+    margin: 70px 70px 0px 0px;
+  }
+  .card_image {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    /* border: 2px solid rgb(27, 27, 19); */
+    padding: 0%;
+    flex: 1 1 0%;
+    overflow: hidden;
+  }
+  .card_image img {
+    position: relative;
+    max-width: 25rem;
+    left: -15%;
+    padding: 0%;
+    margin: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+    /* border: 2px solid rgb(27, 27, 19); */
+  }
+
+  .card_box {
+    display: block;
+    display: block;
+    position: absolute;
+    left: 0%;
+    top: 45%;
+    transform: translateX(-50%) translateY(-30%);
+    z-index: 1;
+  }
+  h1 {
+    text-align: start;
+  }
+  h1,
+  h2 {
+    margin-top: 0%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .card_image img {
+    width: 15rem;
+  }
+  .card {
+    padding: 0%;
+  }
+}
