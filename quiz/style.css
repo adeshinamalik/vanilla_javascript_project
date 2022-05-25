@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Inconsolata:wght@200&family=Josefin+Sans:ital,wght@1,300&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: content-box;
+  /* font-family: 'Fredoka', sans-serif; */
+  font-family: 'Inconsolata', monospace;
+  /* font-family: 'Josefin Sans', sans-serif; */
+}
+body {
+  background-color: #00487c;
+}
+label {
+  display: block;
+  border: 3px solid;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  text-justify: auto;
+}
+.container {
+  background-color: #0d1a2d;
+  width: 30vw;
+  height: 85vh;
+  position: relative;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  box-shadow: 0px 3px 50px -20px;
+  overflow: hidden;
+}
+.anwser {
+  background-color: aliceblue;
+  height: 70%;
+  position: relative;
+  top: 185px;
+  bottom: 0px;
+  border-radius: 20px;
+}
+li {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10%;
+  font-size: 1.3rem;
+}
+[type='radio'] {
+  padding-left: 300px;
+}
+#question {
+  padding: 20px;
+}
+h1 {
+  display: inline;
+  position: relative;
+  top: 27%;
+  left: 5%;
+  color: aliceblue;
+}
+.ayo {
+  display: flex;
+  justify-content: space-between;
+}
+input {
+  position: relative;
+  left: -15%;
+  top: 4px;
+  transform: translateY(-50);
+}
+
+button {
+  position: relative;
+  left: 40%;
+  top: 26%;
+  padding: 10px 30px;
+  border-radius: 20px;
+  border: none;
+  font-weight: 2000;
+  font-size: 1.2rem;
+  /* color: aliceblue; */
+  background-color: #00487c;
+  box-shadow: 0px 0px 5px 2px #071e2e;
+}
+#mymy {
+  box-sizing: border-box;
+  background-color: #0d1a2d;
+  width: 25vw;
+  height: 200px;
+  position: relative;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  box-shadow: 0px 3px 50px -20px #000;
+  overflow: hidden;
+  font-size: 2em;
+  color: aliceblue;
+  padding: 70px 35px;
+}
